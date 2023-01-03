@@ -1,4 +1,6 @@
 /*
+근무시간
+
 문제
 당신은 인사팀 직원으로, 각 직원의 근태를 확인하고자 한다.
 당신의 회사는 자율출퇴근제를 실시하기 때문에 각 직원이 정확히 몇 시에 출근하는 것은 중요하지 않고, 총 근로 시간이 몇 분인지가 중요하다. 
@@ -66,9 +68,10 @@ import java.util.Scanner;
 
 public class Practice02 {
 
+	public static Scanner sc = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
+		WorkTime wt = new WorkTime();
 		
 		String go =  sc.next();
 		String[] goT = go.split(":");
@@ -76,17 +79,15 @@ public class Practice02 {
 		String leave = sc.next();
 		String[] leaveT = leave.split(":");
 	}
-
-}
-
-class WorkTime {
-	public int solution(String[] goTime, String[] leaveTime) {
-		int answer = 0;
-		
-		for(int i = 1; i <= 5; i++) {
+	
+	static class WorkTime {
+		public int solution(String[] goTime, String[] leaveTime) {
+			int answer = 0;
 			
+			for(int i = 0; i < 5; i++) {
+				
+			}
+			return answer;
 		}
-		
-		return answer;
 	}
 }

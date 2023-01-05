@@ -67,27 +67,28 @@ package level_1;
 import java.util.Scanner;
 
 public class Practice02 {
-
-	public static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		WorkTime wt = new WorkTime();
 		
-		String go =  sc.next();
-		String[] goT = go.split(":");
+		Scanner sc = new Scanner(System.in);
 		
-		String leave = sc.next();
-		String[] leaveT = leave.split(":");
-	}
+		int totalTime = 0;
 	
-	static class WorkTime {
-		public int solution(String[] goTime, String[] leaveTime) {
-			int answer = 0;
+		for(int i = 0; i < 5; i++) {
+			String go = sc.next();
+			String[] goT = go.split(":");
 			
-			for(int i = 0; i < 5; i++) {
+			int minuteGo = (Integer.parseInt(goT[0]) * 60) + Integer.parseInt(goT[1]);
 				
-			}
-			return answer;
+			String leave = sc.next();
+			String[] leaveT = leave.split(":");
+			
+			int minuteLeave = (Integer.parseInt(leaveT[0]) * 60) + Integer.parseInt(leaveT[1]);
+			
+			int dailyTime = minuteLeave - minuteGo;
+			totalTime += dailyTime;
 		}
+		 System.out.println(totalTime);
+		 
 	}
 }

@@ -115,7 +115,7 @@ public class No1316 {
 						} else {
 							continue; // 연속적으로 같은 문자가 나왔을 경우
 						}
-							//System.out.print(abcCheck[j] + " ");
+							
 					}
 					
 				}
